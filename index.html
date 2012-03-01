@@ -4,17 +4,19 @@
   <meta charset='utf-8'>
 
   <title>widged/iBook-widgets @ GitHub</title>
+  <link href="easyslider/css/screen.css" rel="stylesheet" type="text/css" media="screen" />
 
   <style type="text/css">
     body {
       margin-top: 1.0em;
-      background-color: #eeeeee;
+      background-color: #FFFFFF;
       font-family: Helvetica, Arial, FreeSans, san-serif;
       color: #000000;
     }
     #container {
       margin: 0 auto;
-      width: 700px;
+      padding: 50px 9px;
+      width: 720px;
     }
     h1 { font-size: 3.8em; color: #111111; margin-bottom: 3px; }
     h1 .small { font-size: 0.4em; }
@@ -28,6 +30,7 @@
     hr { border: 0; width: 80%; border-bottom: 1px solid #aaa}
     .footer { text-align:center; padding-top:30px; font-style: italic; }
   </style>
+
 </head>
 
 <body>
@@ -49,32 +52,52 @@
       Evaluating what is possible with iBook html widgets. Exploring data persistence, low-tech remote data storage, highly interactive activities. Illustrating possible educational uses. 
     </div>
 
-    
 
-    
       <h2>Dependencies</h2>
       <p>Widgets are meant to be embedded in an iBook authored with iBook Author and they are written to run when embedded in an iBook run on the iPad. </p>
     
 
-    
       <h2>Install</h2>
       <p>In iBookAuthor, click on the Widgets button, in the toolbar, select HTML widget at the end of the list, when asked for a dashcode file, points the file chooser to one of the ".wdgt" file. </p>
       <p>Most HTML widgets will play on any modern browser (on a mac, you would have to right-click on the file and choose Show package content'). Open the widget folder, click on the main html file (index.html or main.html). This will run the html file in your default browser.</p>
     
 
+      <h2>Preview</h2>
+
+      	<div id="content">
+    		<div id="slider">
+    			<ul>				
+    				<li><a href="https://github.com/widged/iBook-widgets/tree/master/widgets/localStorage.wdgt"><img src="easyslider/slides/01.jpg" alt="Css Template Preview" /></a></li>
+    				<li><a href="https://github.com/widged/iBook-widgets/tree/master/widgets/sharingDataAcrossWidgets.wdgt"><img src="easyslider/slides/02.jpg" alt="Css Template Preview" /></a></li>
+    				<li><a href="https://github.com/widged/iBook-widgets/tree/master/widgets/googleStorage.wdgt"><img src="easyslider/slides/03.jpg" alt="Css Template Preview" /></a></li>
+    				<li><a href="https://github.com/widged/iBook-widgets/tree/master/widgets/jsxgraph.wdgt"><img src="easyslider/slides/04.jpg" alt="Css Template Preview" /></a></li>
+    				<li><a href="https://github.com/widged/iBook-widgets/tree/master/widgets/firebugEmbed.wdgt"><img src="easyslider/slides/05.jpg" alt="Css Template Preview" /></a></li>
+    			</ul>
+    		</div>
+    	</div>
+
+    <h2>Documentation</h2>
+
+    The documentation is in the form of an iBook as it allows to demonstrate the widgets in context. The current title is "Interactive iBooks" and it comes in two formats, <a href="http://github.com/widged/iBook-widgets/raw/master/Interactive%20iBooks.pdf">pdf</a> (2.4MB) or <a href="http://github.com/widged/iBook-widgets/raw/master/Interactive%20iBooks.iba">iba</a> (iBookAuthor, 12MB).
+    
+    <div style="padding-top: 18px">
+        <a href="http://github.com/widged/iBook-widgets/raw/master/Interactive%20iBooks.pdf"><img src="iBook-pdf.png" alt="Interactive iBooks, pdf version" /></a></li>
+        <a href="http://github.com/widged/iBook-widgets/raw/master/Interactive%20iBooks.iba"><img src="iBook-iba.png" alt="Interactive iBooks, iba version" /></a></li>
+    </div>
+
     
       <h2>License</h2>
-      <p>MIT License (http://widged.mit-license.org/)</p>
+      <p>MIT License (<a href="http://widged.mit-license.org/">http://widged.mit-license.org/</a>)</p>
     
 
     
       <h2>Authors</h2>
-      <p>Marielle Lange (http://widged.com)</p>
+      <p>Marielle Lange (<a href="http://widged.com">http://widged.com</a>)</p>
     
 
     
       <h2>Contact</h2>
-      <p>Marielle Lange (http://widged.com)</p>
+      <p>Marielle Lange (<a href="http://widged.com">http://widged.com</a>)</p>
     
 
     <h2>Download</h2>
@@ -91,6 +114,15 @@
     <div class="footer">
       get the source code on GitHub : <a href="https://github.com/widged/iBook-widgets">widged/iBook-widgets</a>
     </div>
+
+	<script type="text/javascript" src="easyslider/js/jquery.js"></script>
+	<script type="text/javascript" src="easyslider/js/easySlider1.7.js"></script>
+	<script type="text/javascript">
+			$("#slider").easySlider({
+				auto: true, 
+				continuous: true
+			});
+	</script>
 
   </div>
 
