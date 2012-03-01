@@ -10,7 +10,7 @@ For more information, check the "Interactive iBooks" iBook (the top level README
 
 (the preview is shown as an image, interactivity is not available)
 
-![Alt text](https://github.com/widged/iwidgets-for-learning/raw/master/widgets/googleStorage.wdgt/Default.png)
+![Alt text](http://github.com/widged/iBook-widgets/raw/master/widgets/googleStorage.wdgt/Default.png)
 
 # Author
 

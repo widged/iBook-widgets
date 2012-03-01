@@ -8,7 +8,7 @@ To demonstrate how to embed jsxGraph in a widget.
 
 (the preview is shown as an image, interactivity is not available)
 
-![Alt text](https://github.com/widged/iwidgets-for-learning/raw/master/widgets/jsxgraph.wdgt/Default.png)
+![Alt text](http://github.com/widged/iBook-widgets/raw/master/widgets/jsxgraph.wdgt/Default.png)
 
 # Author
 

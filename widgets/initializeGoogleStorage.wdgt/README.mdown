@@ -8,7 +8,7 @@ To demonstrate how localStorage can be used to save configuration data that will
 
 (the preview is shown as an image, interactivity is not available)
 
-![Alt text](https://github.com/widged/iwidgets-for-learning/raw/master/widgets/initializeGoogleStorage.wdgt/Default.png)
+![Alt text](http://github.com/widged/iBook-widgets/raw/master/widgets/initializeGoogleStorage.wdgt/Default.png)
 
 # Author
 

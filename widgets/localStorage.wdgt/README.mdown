@@ -8,7 +8,7 @@ To demonstrate how localStorage can be used to persist data on a device. As a us
 
 (the preview is shown as an image, interactivity is not available)
 
-![Alt text](https://github.com/widged/iwidgets-for-learning/raw/master/widgets/localStorage.wdgt/Default.png)
+![Alt text](http://github.com/widged/iBook-widgets/raw/master/widgets/localStorage.wdgt/Default.png)
 
 # Author
 

@@ -13,7 +13,7 @@ Explanations on how to import your widgets into your iBooks or edit them is prov
 
 The easiest way to demonstrate the widgets was by embedding them into an iBook. If you have a Mac with iBook Author installed (it's free but requires OSX 10.7.2 or later), you can open the download and open the iba file ("Interactive iBooks.iba"). Connect your iPad to the USB port, open the iBook app on your iPad, and click the preview button. 
 
-For those without a mac or iBook author, you can check the [Interactive iBooks PDF](https://github.com/widged/iwidgets-for-learning/raw/master/Interactive%20iBooks.pdf) (pdf, 2.4 MB). Obviously, interactive elements are not available. 
+For those without a mac or iBook author, you can check the [Interactive iBooks PDF](http://github.com/widged/iBook-widgets/raw/master/Interactive%20iBooks.pdf) (pdf, 2.4 MB). Obviously, interactive elements are not available. 
 
 #Widgets
 

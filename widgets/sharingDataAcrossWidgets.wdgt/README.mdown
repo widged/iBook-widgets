@@ -8,7 +8,7 @@ To demonstrate how iBooks widgets can exchange data with one another. As a use-c
 
 (the preview is shown as an image, interactivity is not available)
 
-![Alt text](https://github.com/widged/iwidgets-for-learning/raw/master/widgets/sharingDataAcrossWidgets.wdgt/Default.png)
+![Alt text](http://github.com/widged/iBook-widgets/raw/master/widgets/sharingDataAcrossWidgets.wdgt/Default.png)
 
 # Author
 
