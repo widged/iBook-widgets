@@ -1,0 +1,30 @@
+# Using Google Spreadsheets for Remote Storage
+
+# Why?
+
+To demonstrate how to use Google for remote data storage. Storing data externally is the first step to make it possible for other devices to access these data. We use google to provide a no-server solution. Acces to the internet is required, but you don't need to write any server-side script to write data on a spreadsheet.   
+
+For more information, check the "Interactive iBooks" iBook (the top level README file should tell you how you can access it).
+
+#Preview
+
+(the preview is shown as an image, interactivity is not available)
+
+![Alt text](https://github.com/widged/iwidgets-for-learning/raw/master/widgets/googleStorage.wdgt/Default.png)
+
+# Author
+
+Marielle Lange ([http://widged.com](http://widged.com))
+
+# License
+
+http://widged.mit-license.org/
+
+# Credits
+
+*[HTML Widget boiler plate](https://github.com/TrevorBurnham/iBooks-HTML-Widget-Boilerplate)*, a minimal project for an HTML Widget that can be embedded in an iBook with iBooks Author. ([MIT License](http://trevorburnham.mit-license.org/))
+
+*[Twitter Bootstrap](http://twitter.github.com/bootstrap/)*, a small framework to provide adapte views on multiple devices ([Apache 2.0 License](http://www.apache.org/licenses/LICENSE-2.0)).
+
+*[jqPlot](http://www.jqplot.com/)*, a library for charting data ([GPL 2.0 License](http://www.gnu.org/licenses/gpl-2.0.html)).
+

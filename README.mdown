@@ -1,0 +1,30 @@
+# iBooks HTML Widget examples
+
+Easy to adapt examples of HTML Widgets.
+
+# Based on HTML Widget boiler plate
+
+*[HTML Widget boiler plate](https://github.com/TrevorBurnham/iBooks-HTML-Widget-Boilerplate)*, a minimal project for an HTML Widget that can be embedded in an iBook with iBooks Author. ([MIT License](http://trevorburnham.mit-license.org/))
+
+Explanations on how to import your widgets into your iBooks or edit them is provided in README-Boilerplate.mdown, a copy of the README from *[HTML Widget boiler plate](https://github.com/TrevorBurnham/iBooks-HTML-Widget-Boilerplate)*.
+
+
+#iBook
+
+The easiest way to demonstrate the widgets was by embedding them into an iBook. If you have a Mac with iBook Author installed (it's free but requires OSX 10.7.2 or later), you can open the download and open the iba file ("Interactive iBooks.iba"). Connect your iPad to the USB port, open the iBook app on your iPad, and click the preview button. 
+
+For those without a mac or iBook author, you can check the [Interactive iBooks PDF](https://github.com/widged/iwidgets-for-learning/raw/master/Interactive%20iBooks.pdf) (pdf, 2.4 MB). Obviously, interactive elements are not available. 
+
+#Widgets
+
+HTML Widgets are made from HTML and associated technologies. They will run in any webkit browser (Safari is best). 
+
+Download the project (the easiest way is to click on the "Zip" button). Uncompress if necessary. Navigate to the widgets folder. On a PC, you should have access to the folder content right away. On a mac, right-click on any ".wdgt" file and select "Show Package Content". Once inside the Package, double click on main.html to open it in the browser. Not all widget functionalities may be available (for instance, localStorage data cannot be shared across widgets on the desktop). 
+
+# Author
+
+Marielle Lange (http://widged.com)
+
+# License
+
+http://widged.mit-license.org/

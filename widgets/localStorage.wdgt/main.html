@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Local Storage</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- CSS dependencies -->
+    <link href="libs/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+  </head>
+
+  <body>
+
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="brand" href="#">Local Storage</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+
+			<p>Please enter your name</p>
+			<p>
+        <input type="text" id="studentName" size="40" value="John Doe" /> 
+        <span id="lastSaved"></span>
+      </p>
+			<p><a id="btn-save" class="btn btn-primary btn-large">Save Data</a></p>
+
+	</div>
+    <!-- ================================================== -->
+    <!-- Javascript placed at the end of the document so the pages load faster -->
+
+    <!-- jQuery, needed both for activity and boostrap -->
+   <script language="javascript" type="text/javascript" src="libs/jquery.js"></script>
+    <!-- Bootstrap, for the nice looking interface -->
+    <script src="libs/bootstrap/js/bootstrap-button.js"></script>
+
+    <!-- Custom activity script -->
+
+	<script language="javascript" type="text/javascript">
+		var $input = $("input#studentName");
+
+		if(localStorage.studentName) {
+			$('span#lastSaved').html('(last saved: ' + localStorage.studentName + ")")
+		}
+
+		$('#btn-save').click(function () {
+		 var studentName =  $input.val();
+		 localStorage.studentName=studentName;
+		 localStorage.completedActivity1=true;
+		});
+
+	</script>
+
+
+  </body>
+</html>
+
+

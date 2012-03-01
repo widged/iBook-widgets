@@ -1,0 +1,17 @@
+body {
+	padding-top: 60px;
+	padding-bottom: 40px;
+	padding-left: 12px;
+	padding-right: 12px;
+}
+
+table#activities > tbody > tr > td {
+}
+
+ul {
+	list-style-type: none;	
+}
+
+li {
+	padding-top: 6px;	
+}

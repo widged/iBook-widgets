@@ -1,0 +1,27 @@
+# jsxGraph embed
+
+# Why?
+
+To demonstrate how to embed jsxGraph in a widget.
+
+#Preview
+
+(the preview is shown as an image, interactivity is not available)
+
+![Alt text](https://github.com/widged/iwidgets-for-learning/raw/master/widgets/jsxgraph.wdgt/Default.png)
+
+# Author
+
+Marielle Lange ([http://widged.com](http://widged.com))
+
+# License
+
+http://widged.mit-license.org/
+
+# Credits
+
+*[HTML Widget boiler plate](https://github.com/TrevorBurnham/iBooks-HTML-Widget-Boilerplate)*, a minimal project for an HTML Widget that can be embedded in an iBook with iBooks Author. ([MIT License](http://trevorburnham.mit-license.org/))
+
+*[jsxGraph Library](http://jsxgraph.uni-bayreuth.de/)*, a powerful library for interactive Geometry, plotting, visualization ([LPGL License](http://www.gnu.org/licenses/lgpl.html))
+
+Lila F. Roberts for contributing a widget example on the [jsxGraph Google Group](https://groups.google.com/forum/#!msg/jsxgraph/-jMz0d9chWE/AMJp-VnWQUQJ).

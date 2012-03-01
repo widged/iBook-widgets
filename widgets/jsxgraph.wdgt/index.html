@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="chrome=1,IE=9" />
+		<meta name="viewport" content="user-scalable=yes, width=600" />
+		<title>JSXGraph Embed</title>
+		<style>
+			body {
+				background-color: #FFFFFF;
+				margin: 20px;
+			}
+		</style>
+
+		<link rel="stylesheet" href="distrib/jsxgraph.css" type="text/css" />
+
+		<!-- JSXGraph config-->
+		<script src="distrib/jsxgraphcore.js" type="text/javascript"></script>
+	</head>
+	<body>
+
+		<p>First impressions (the points <em>A,B,C,D,E</em> can be dragged):</p>
+		<div id='jxgbox' class='jxgbox' style='width:400px; height:400px;'></div>
+
+	    <p>JSXGraph 0.93 <a href="http://www.jsxgraph.org">www.jsxgraph.org</a></p>
+	    <p><a href="http://jsxgraph.uni-bayreuth.de/showcase">Showcases</a> | <a href="http://jsxgraph.uni-bayreuth.de/wiki/index.php/Showcases">Selected examples</a> | <a href="http://jsxgraph.uni-bayreuth.de/wiki/index.php/Category:Examples">All examples</a>
+	    </p>
+
+	    <!-- ================================================== -->
+	    <!-- Javascript placed at the end of the document so the pages load faster -->
+    	<!-- Custom Activity script -->
+
+		<script type='text/javascript'>
+		/* <![CDATA[ */
+
+		var brd = JXG.JSXGraph.initBoard('jxgbox', {boundingbox:[-2,5,5,-2]});
+
+		var A  = brd.create('point', [0,0]),
+		    B  = brd.create('point', [2,0]),
+		    C  = brd.create('point', [1,2]),
+		 
+		    a1 = brd.create('segment', [A,B], {name:'a1', withLabel:true}),
+		    a2 = brd.create('segment', [B,C], {name:'a2', withLabel:true}),
+		    a3 = brd.create('segment', [C,A], {name:'a3', withLabel:true}),
+		    c1 = brd.create('circle', 
+		            [A, 
+		             function(){ var r1 = (C.Dist(A)-B.Dist(C)+A.Dist(B))/2.0;
+		                        return r1; }
+		            ]);
+		    c2 = brd.create('circle', 
+		            [B, 
+		             function(){ return A.Dist(B)-c1.Radius(); }
+		            ]);
+		    c3 = brd.create('circle', 
+		            [C, 
+		             function(){ return B.Dist(C)-c2.Radius(); }
+		            ]);
+		  /* ]]> */
+		</script>
+	</body>
+</html>

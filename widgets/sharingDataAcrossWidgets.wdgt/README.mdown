@@ -1,0 +1,26 @@
+# Sharing Data Across Widgets.
+
+# Why?
+
+To demonstrate how iBooks widgets can exchange data with one another. As a use-case, we provide a report card, that lists all interactive activities in a chapter and their completion status. 
+
+#Preview
+
+(the preview is shown as an image, interactivity is not available)
+
+![Alt text](https://github.com/widged/iwidgets-for-learning/raw/master/widgets/sharingDataAcrossWidgets.wdgt/Default.png)
+
+# Author
+
+Marielle Lange ([http://widged.com](http://widged.com))
+
+# License
+
+http://widged.mit-license.org/
+
+# Credits
+
+*[HTML Widget boiler plate](https://github.com/TrevorBurnham/iBooks-HTML-Widget-Boilerplate)*, a minimal project for an HTML Widget that can be embedded in an iBook with iBooks Author. ([MIT License](http://trevorburnham.mit-license.org/))
+
+*[Twitter Bootstrap](http://twitter.github.com/bootstrap/)*, a small framework to provide adapte views on multiple devices ([Apache 2.0 License](http://www.apache.org/licenses/LICENSE-2.0)).
+

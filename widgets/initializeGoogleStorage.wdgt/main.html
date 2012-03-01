@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Local Storage</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- CSS dependencies -->
+    <link href="libs/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+  </head>
+
+  <body>
+
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="brand" href="#">Local Storage</a>
+        </div>
+      </div>
+    </div>
+
+    <section id="form">
+		<div id="save-feedback" class="alert alert-success">
+	      <a class="close" data-dismiss="alert">×</a>
+		  Data Saved, thank you!
+		</div>
+
+		<div id="validation-warning" class="alert alert-error">
+	      <a class="close" data-dismiss="alert">×</a>
+		  The following errors have been found
+		  <ul id="validation-errors"/>
+		</div>
+
+		<div class="page-header">
+		    <h1>Configuration data for this iBook</h1>
+		</div>
+
+		<div id="activity-form">
+			<h3>Google Spreadsheet</h3>
+			<p>Sheet Key: <input type="text" id="sheet-key" class="size-long" /> </p>
+			<p>Form Key: <input type="text" id="form-key"  class="size-long"  /> </p>
+
+			<h3>User</h3>
+			<p>User Name: <input type="text" id="user-name" class="size-medium" /> </p>
+		</div>
+
+		<div id="activity-actions">
+            <a id="btn-save" class="btn btn-primary btn-large">Save</a>
+		</div>
+
+
+
+	</div>
+	    <!-- ================================================== -->
+    <!-- Javascript placed at the end of the document so the pages load faster -->
+
+    <!-- jQuery, needed both for activity and boostrap -->
+   <script language="javascript" type="text/javascript" src="libs/jquery.js"></script>
+    <!-- Bootstrap, for the nice looking interface -->
+    <script src="libs/bootstrap/js/bootstrap-button.js"></script>
+    <script src="libs/bootstrap/js/bootstrap-alert.js"></script>
+
+    <!-- Custom Activity script -->
+
+	<script language="javascript" type="text/javascript">
+
+		var $sheetInput = $('input#sheet-key'),
+			$formInput  = $('input#form-key'),
+			$nameInput  = $('input#user-name'),
+		    $warning = $('#validation-warning'),
+		    $success = $('#save-feedback'),
+		    sheetDefault = "0AowayyeQN842dF9zaXhaVTVPbHZCNkJEcUZkYUxqVUE",
+		    formDefault = "dF9zaXhaVTVPbHZCNkJEcUZkYUxqVUE6MQ",
+		    userDefault = "John Doe";
+
+
+	     // initialize
+		$success.hide();
+	    $warning.hide();
+	    $sheetInput.val(sheetDefault);
+	    $formInput.val(formDefault);
+	    $nameInput.val(userDefault);
+
+		$('#btn-save').click(function () {
+			var $errors = $('#validation-errors'),
+				errorList, errorQty = 0,
+		        sheetKey, formKey, userName;
+
+		     // initialize
+			$success.hide();
+		    $warning.hide();	     
+
+		     // read the values
+		    sheetKey   =  $("input#sheet-key").val();
+		    formKey    =  $("input#form-key").val();
+		    userName   =  $("input#user-name").val();
+			// console.log(sheetKey, formKey, userName);
+
+		     // validate
+		    errorList = [];
+		    if(!sheetKey) { errorList.push('Google Sheet Key missing'); } 
+		    if(!formKey)  { errorList.push('Google Form Key missing'); } 
+		    if(!userName) { errorList.push('User Name missing'); } 
+		    // add extra validation to check that the data are in the expected format.
+		    if(sheetKey.length < 40)   { errorList.push('Google Sheet Key is too short. It should be at least 40 characters'); } 
+		    if(formKey != formDefault) { errorList.push('For the examples to work, the form key needs to be "dF9zaXhaVTVPbHZCNkJEcUZkYUxqVUE6MQ". Edit the source code to remove this condition.'); } 
+
+		    errorQty = errorList.length;
+		    $errors.empty();
+		    for (var i = 0; i < errorQty; i++) {
+		    	$errors.append('<li>' + errorList[i] + '</li>');
+		    };
+
+		    if(errorQty)
+		    {
+		    	$success.hide();
+		    	$warning.show();
+		    }	
+		    else
+		    {
+		    	$success.show();
+		    	$warning.hide();
+			    localStorage.sheetKey=sheetKey;
+			    localStorage.formKey=formKey;
+			    localStorage.userName=userName;
+		    }
+		});
+	</script>
+
+
+  </body>
+</html>
+
+
+
+
+

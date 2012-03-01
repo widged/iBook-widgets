@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Storage Across Widgets</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- CSS dependencies -->
+    <link href="libs/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link href="libs/jqplot/jquery.jqplot.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+  </head>
+
+  <body>
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="brand" href="#">Google Storage</a>
+        </div>
+      </div>
+    </div>
+
+    <section id="add-up-activity">
+
+    <div class="alert alert-info">
+      The data are saved in a google spreadsheet visible at:
+      https://docs.google.com/spreadsheet/ccc?key=0AowayyeQN842dF9zaXhaVTVPbHZCNkJEcUZkYUxqVUE#gid=0
+    </div>
+
+     <div id="activity-warning">
+        <span class="activity-status label label-important">Set-up data are missing. Make sure you run the initialisation widget first! You will be able to graph the data but not send them to Google.</span>
+     </div>   
+
+    <div id="save-feedback" class="alert alert-success">
+      <a class="close" data-dismiss="alert">×</a>
+      Data Saved, thank you!
+    </div>
+
+      <div class="page-header">
+            <h1>Adding Up</h1>
+      </div>
+
+        
+        <div id="activity" class="span4">
+            <div id="activity-instructions">Write down four pairs of numbers that add up to 5.</div>
+            <div id="activity-data">
+                <input type="number" id="x1"/> and <input type="number" id="y1" size="4"/><br/>
+                <input type="number" id="x2"/> and <input type="number" id="y2" size="4"/><br/>
+                <input type="number" id="x3"/> and <input type="number" id="y3" size="4"/><br/>
+                <input type="number" id="x4"/> and <input type="number" id="y4" size="4"/><br/>
+            </div>
+            <div id="activity-actions">
+                <a id="btn-refresh" class="btn btn-primary btn-large">Graph</a> 
+                <a id="btn-send" class="btn btn-primary btn-large">Send to Google</a>
+            </div>
+        </div>
+
+        <div id="chartContainer" class="span4"></div>
+
+
+    </section>
+
+    <!-- ================================================== -->
+    <!-- Javascript placed at the end of the document so the pages load faster -->
+
+    <!-- jQuery, needed both for activity and boostrap -->
+    <script language="javascript" type="text/javascript" src="libs/jquery/jquery.js"></script>
+    
+    <!-- Bootstrap -->
+    <script src="libs/bootstrap/js/bootstrap-button.js"></script>
+
+    <!-- jqPlot -->
+    <script language="javascript" type="text/javascript" src="libs/jqplot/jquery.jqplot.min.js"></script>
+
+    <!-- ================================================== -->
+    <!-- Activity script -->
+    <script language="javascript" type="text/javascript" src="js/googleStorage.js"></script>
+    <script language="javascript" type="text/javascript">
+
+        // used when testing on the desktop as cross-widget data exchange doesn't work in that context
+        // localStorage.formKey = "dF9zaXhaVTVPbHZCNkJEcUZkYUxqVUE6MQ";
+        // localStorage.userName = "John Doe";
+
+
+        var $chart = $('#chartContainer'),
+            $btnRefresh = $('#btn-refresh'),
+            $btnSend = $('#btn-send');
+            $success = $('#save-feedback'),
+            $warning = $('#activity-warning'),
+
+
+        $success.hide();
+        $warning.hide();
+
+        var emptySerie = [[null,null]];
+        var googleEnabled = false;
+        var jq = $; // required because $ is not available within the click scope
+
+        var readData = function(format) {
+            var arr = [], str = [], x = '', y = '';
+            for(var i =1; i <= 4; i++)
+            {
+                x = $('input#x' + i).val();
+                y = $('input#y' + i).val();
+                str.push('' + x + ',' + y);
+                if(x && y) { arr.push([x,y])}
+            }
+            if(arr.length == 0) arr = emptySerie;
+            if(format == 'str') return '' + str.join(";");
+            return arr;
+        };
+            
+        var drawPlot = function (serie) {
+            jq.jqplot(
+            'chartContainer',  
+            [serie], 
+            { 
+                seriesDefaults: { showLine: false },
+                 axesDefaults: { ticks: [-6,-5,-4,-3,-2,-1,0,1,2,3,4,5,6], tickOptions: {formatString: '%.1P'} }
+             }
+            );    
+        };
+            
+        $btnRefresh.click(function () {
+            $success.hide();
+            var arr = readData();
+            $chart.empty();
+            drawPlot(arr);
+        });
+
+        drawPlot(emptySerie); 
+        var formKey  = localStorage.formKey;
+        var userName = localStorage.userName;
+        // validation
+        console.log('[localStorage]', formKey, userName);
+        googleEnabled = (formKey && userName) ? true : false;
+
+        // validation
+        if(googleEnabled)
+        {
+            $warning.hide()
+            $btnSend.removeAttr( "disabled" );
+            $btnSend.click(function () {
+                $success.hide();
+
+                var data = readData('str');
+                console.log("aData", data);
+                if(googleEnabled) { widged.activitydata_gsheet.update("#activity-save", {data: data}) };
+                $success.show();
+
+            });
+
+            widged.activitydata_gsheet.setup("#activity-save", {uid: 'dy/dan', form: {formkey: formKey}, studentName: userName});
+        }
+        else
+        {
+            $btnSend.attr("disabled", "disabled");
+            $warning.show()
+        }
+
+
+
+    </script>
+
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+

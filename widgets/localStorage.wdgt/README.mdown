@@ -1,0 +1,26 @@
+# Using Local Storage to Persist Data on the iPad
+
+# Why?
+
+To demonstrate how localStorage can be used to persist data on a device. As a use-case we store basic configuration data (the user name). 
+
+#Preview
+
+(the preview is shown as an image, interactivity is not available)
+
+![Alt text](https://github.com/widged/iwidgets-for-learning/raw/master/widgets/localStorage.wdgt/Default.png)
+
+# Author
+
+Marielle Lange ([http://widged.com](http://widged.com))
+
+# License
+
+http://widged.mit-license.org/
+
+# Credits
+
+*[HTML Widget boiler plate](https://github.com/TrevorBurnham/iBooks-HTML-Widget-Boilerplate)*, a minimal project for an HTML Widget that can be embedded in an iBook with iBooks Author. ([MIT License](http://trevorburnham.mit-license.org/))
+
+*[Twitter Bootstrap](http://twitter.github.com/bootstrap/)*, a small framework to provide adapte views on multiple devices ([Apache 2.0 License](http://www.apache.org/licenses/LICENSE-2.0)).
+

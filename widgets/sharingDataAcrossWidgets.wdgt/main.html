@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Storage Across Widgets</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- CSS dependencies -->
+    <link href="libs/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+  </head>
+
+  <body>
+
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="brand" href="#">Accessing Data Stored by Another Widget</a>
+        </div>
+      </div>
+    </div>
+
+	<section id="progress-report">
+
+	  <div class="page-header">
+			<h1>Summary for  <small><span id="userName"></small></h1>
+			<h3>Progress Report</h3>
+	  </div>
+
+		<table id="activities" class="table table-bordered table-striped">
+		    <thead>
+		      <tr>
+		        <th>Activity</th>
+		        <th>Status</th>
+		      </tr>
+		    </thead>
+		    <tbody/>
+		  </table>
+	</section>
+
+
+
+	<!-- ================================================== -->
+    <!-- Javascript placed at the end of the document so the pages load faster -->
+
+    <!-- jQuery, needed both for activity and boostrap -->
+	<script language="javascript" type="text/javascript" src="libs/jquery.js"></script>
+    
+    <!-- Bootstrap -->
+    <script src="libs/bootstrap/js/bootstrap-button.js"></script>
+
+    <!-- Custom activity script -->
+	<script language="javascript" type="text/javascript">
+	    // ternary operator. condition ? value if success : value if failure. 
+	    var userName = localStorage.studentName != undefined ? localStorage.studentName : 'current user';
+		$('span#userName').html(userName);
+
+		var defaultName = "Interactive";
+		var activityList = [
+			{name: 'Interactive 1', status: localStorage.completedActivity1 ? 'success' : 'notattempted'},
+			{name: 'Interactive 2', status: "incomplete"},
+			{name: 'Interactive 3', status: "failed"},
+			{name: 'Interactive 4', status: "notattempted"},
+			{name: 'Interactive 5', status: "notattempted"},
+			{name: 'Interactive 6', status: "notattempted", name: 'Final Quizz'}
+		]
+		var statusOptions = {
+			success:      {css: 'label-success', label: 'complete'}, 
+			incomplete:   {css: 'label-warning', label: 'incomplete'}, 
+			notattempted: {css: 'label-default', label: 'not attempted'}, 
+			failed:       {css: 'label-important', label: 'failed'}, 
+		}
+
+		var $tbody = $('table#activities > tbody'), 
+			$row = '', 
+			itemQty = activityList.length;
+			item = {};
+			statusUid = '', 
+			statusData = {};
+		
+		$tbody.empty();
+		for (var i = 0; i < itemQty; i++) {
+			$row = $('<tr/>');
+			item = activityList[i];
+			statusUid = '' + item.status;
+			statusData    = statusOptions[statusUid];
+			// column 1, activity name
+			$row.append('<td>' + item.name + '</td>');
+			$row.append('<td><span class="activity-status label '+ statusData.css +'">' + statusData.label +'</span></td>');
+			$tbody.append($row);
+			
+		};
+
+	</script>
+
+  </body>
+</html>
+
+
+
+
+
