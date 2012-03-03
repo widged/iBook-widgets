@@ -1,3 +1,20 @@
+# Khan Exercises embed
+
+# Why?
+
+To demonstrate how to embed khan exercise in a widget.
+
+#Preview
+
+(the preview is shown as an image, interactivity is not available)
+
+![Alt text](http://github.com/widged/iBook-widgets/raw/master/widgets/khanExercises.wdgt/Default.png)
+
+# Author
+
+Bundled into a Widget by Marielle Lange ([http://widged.com](http://widged.com))
+
+
 # Khan Academy Exercises
 
 Copyright 2012 Khan Academy
