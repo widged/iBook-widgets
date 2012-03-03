@@ -1,0 +1,353 @@
+/** Was in khan-site.css but affects the look and feel of exercises **/
+/* Individual Exercise Styles */
+
+#container.single-exercise {
+    overflow: visible;
+    min-width: 740px;
+}
+#container .dashboard-header.single-exercise {
+    border: 1px solid #ccc;
+    border-top: none;
+}
+.exercise-badge.single-exercise {
+    background: #fff;
+    border: 1px solid #C6D1AD;
+    border-top: 1px solid #C6D1AD;
+    cursor: auto;
+    height: 75px;
+    margin: 0;
+    min-width: 887px;
+    width: auto;
+    padding-left: 5px;
+
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+
+    -webkit-box-shadow: none !important;
+    -moz-box-shadow: none;
+    box-shadow: none !important;
+}
+    .exercise-badge.single-exercise:hover {
+        -webkit-box-shadow:none;
+        -moz-box-shadow: none;
+        box-shadow: none;
+    }
+
+.exercise-badge.single-exercise .proficient-badge {
+    padding: 0 3px;
+}
+    .exercise-badge.single-exercise .proficient-badge img {
+        position: relative;
+        top: 6px;
+        width: 60px;
+        height: 62px;
+    }
+
+.proficient-badge {
+    display: block;
+}
+
+.exercise-badge.single-exercise .energy-points-badge {
+    left: auto;
+    right: 5px;
+    top: 22px;
+    height:21px;
+    padding-top: 1px;
+    display:none;
+}
+.exercise-badge.single-exercise .exercise-title {
+    font-size:18px;
+    top: 6px;
+    left: 75px;
+    width: 550px;
+}
+
+.exercise-badge.single-exercise #streak-bar-container{
+  width:325px;
+  position:absolute;
+  right:10px; left:auto; top:20px;
+}
+
+.exercise-badge.single-exercise .streak-bar {
+    position:relative;
+    width:325px;
+    background-image:-webkit-gradient(linear, left top, right top, from(#eee), to(#ccc));
+    background-image: -moz-linear-gradient( left, #eee, #ccc );
+    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=1, startColorstr='#eeeeee', endColorstr='#cccccc');
+    background-position:0 0;
+    border:1px solid rgb(204,204,204);
+    z-index:10;
+}
+
+.exercise-badge.single-exercise .streak-bar .energy-points-badge{
+  position:absolute;
+  top:-10px; right:-5px;
+  z-index:10; display:none;
+}
+
+.exercise-badge.single-exercise .related-content,
+.exercise-badge.single-exercise .summative-help {
+    bottom: 7px;
+    left: 75px;
+    position: absolute;
+    width: 535px;
+    line-height: 13px;
+}
+    .exercise-badge.single-exercise .related-content .related-content-title {
+        float: left;
+        margin-right: 3px;
+    }
+    .exercise-badge.single-exercise .related-content .clear {
+        display: none;
+    }
+    .exercise-badge.single-exercise .related-content .video-energy-points {
+        display: none;
+    }
+    .exercise-badge.single-exercise .related-content ul.related-video-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: inline;
+    }
+        .exercise-badge.single-exercise .related-content ul.related-video-list li {
+            float: left;
+        }
+        .exercise-badge.single-exercise .related-content ul.related-video-list li span.separator {
+            padding-right: 5px;
+        }
+        .exercise-badge.single-exercise .related-content ul.related-video-list li.related-video-extended {
+            display: none;
+        }
+
+#description .related-content {
+    margin-top: -22px;
+    line-height: 13px;
+}
+
+#description .related-content ul.related-exercise-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: inline;
+}
+    #description .related-content ul.related-exercise-list li {
+        display: inline;
+    }
+    #description .related-content ul.related-exercise-list li span.separator {
+        padding-right: 5px;
+    }
+
+#description .practice.simple-button {
+    float: right;
+    font-size: 110%;
+}
+
+#extras.single-exercise {
+    text-align: right;
+    margin: 6px 0 10px;
+    padding-right: 10px;
+}
+#back-to-dashboard-link {
+    float: left;
+    text-align: left;
+    padding-left: 10px;
+}
+#back-to-dashboard.single-exercise a#dashboard-breadcrumb {
+    background-image: url(images/non-repeating-sprites.3.png);
+    background-position: -1px -598px;
+    color: #333;
+    display: block;
+    font-size: 10px;
+    padding: 48px 0 0 4px;
+}
+#back-to-dashboard.single-exercise a#dashboard-breadcrumb:hover {
+    background-image: url(images/non-repeating-sprites.3.png);
+    background-position: -81px -598px;
+    color: #E35D04;
+}
+#back-to-dashboard.single-exercise {
+    display: none;
+    background-color: #fff;
+    border-left: 1px solid #ddd;
+    border-top: 1px solid #C6D1AD;
+    border-bottom: 1px solid #ddd;
+
+    color: #666;
+    float: left;
+    font-size: 11px;
+    height: 69px;
+    padding-left: 2px;
+    width: 67px;
+}
+    .dark #back-to-dashboard.single-exercise {
+        -webkit-box-shadow: 0 -2px 0 #1A222C;
+        -moz-box-shadow: 0 -2px 0 #1A222C;
+        box-shadow: 0 -2px 0 #1A222C;
+    }
+#question_area {
+    margin-left: 10px;
+    margin-bottom: 10px;
+    position: relative;
+    padding: 0;
+    float: left;
+    width: 63%;
+    margin-left: 1%;
+}
+#answer_area_wrap {
+    float: right;
+    width: 27%;
+    margin-right: 10px;
+}
+    #answer_area .info-box {
+        background: #eee;
+        border: 1px solid #ccc;
+        border-bottom: 1px solid #aaa;
+        color: #333;
+        margin-bottom: 10px;
+        overflow-x: auto;
+        padding: 10px;
+        position: relative;
+        z-index: 10;
+
+        box-shadow: 0 1px 2px #ccc;
+        -moz-box-shadow: 0 1px 2px #ccc;
+        -webkit-box-shadow: 0 1px 2px #ccc;
+    }
+    #answer_area .info-box table {
+        border-collapse: collapse;
+    }
+    #answer_area .info-box .info-box-header, #answer_area .info-box .info-box-subheader {
+        color: #777;
+        display: block;
+        font-size: 18px;
+        line-height: 150%;
+        font-weight: bold;
+        text-shadow: 0 1px 0 #fff;
+    }
+    #answer_area .info-box .info-box-subheader {
+        line-height: 200%;
+        font-size: 14px;
+        color: #333;
+    }
+    #answer_area .info-box .related-content-title {
+        display: none;
+    }
+    #answer_area .info-box #related-video-list {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+        #answer_area .info-box #related-video-list li {
+            display: block;
+            margin: 0 0 5px 0;
+        }
+        #answer_area .info-box #related-video-list a {
+            display: block;
+            float: left;
+            margin: 0;
+            width: 98%;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+            #answer_area .info-box #related-video-list a .video-title {
+                white-space: nowrap;
+            }
+        #answer_area .info-box #related-video-list .separator {
+            display: none;
+        }
+        #answer_area .info-box #related-video-list .related-videos-more {
+            float: none;
+            clear:both;
+        }
+            #answer_area .info-box #related-video-list .related-videos-more a {
+                float: none;
+                display: inline;
+            }
+        /* Energy points badge look. Should be used wherever we display energy points */
+        #answer_area .info-box #related-video-list .video-energy-points,
+        .video_extra_links .video-energy-points,
+        #user-info .energy-points-badge,
+        #profile-header #high-level-stats .energy-points-badge,
+        .energy-points-badge {
+            background: #005987;
+            float: right;
+            line-height: 18px;
+            text-align: center;
+            padding: 2px 5px 3px;
+            color: white;
+            font-weight: bold;
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            text-shadow: none;
+
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            border-radius: 5px;
+        }
+        #user-info .energy-points-badge {
+            float: none;
+            font-size: 11px;
+            cursor: pointer;
+        }
+    #answer_area .info-box .info-box-sub-description {
+        display: block;
+        color: #777;
+        margin-bottom: 10px;
+    }
+        #answer_area .info-box .info-box-sub-description strong {
+            color: #444;
+            font-style: italic;
+        }
+    #answer_area .info-box #check-answer-results #feedback {
+        padding: 10px 0 5px;
+    }
+    #answer_area .info-box input#answer {
+        width: 100px;
+    }
+    .exercise.button, #answer_area input.button {
+        background-color: #CCCCCC;
+        border-top: 1px solid #D2D2D2;
+        border-left: 1px solid #D2D2D2;
+        border-right: 1px solid #ACACAC;
+        border-bottom: 1px solid #ACACAC;
+        color: #333;
+        cursor: pointer;
+        font-weight: bold;
+        margin-top: 5px;
+        padding: 2px 5px;
+        position: relative;
+        top: -1px;
+
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        border-radius: 5px;
+
+        box-shadow: 0 1px 2px #666;
+        -webkit-box-shadow: 0 1px 2px #666;
+        -moz-box-shadow: 0 1px 2px #666;
+    }
+        .exercise.button.green, #answer_area input.button.green {
+            background-color: #73982C;
+            border-top: 1px solid #83A445;
+            border-left: 1px solid #83A445;
+            border-bottom: 1px solid #618125;
+            border-right: 1px solid #618125;
+        }
+        .exercise.button.orange, #answer_area input.button.orange {
+            background-color: #E35D04;
+            border-top: 1px solid #E67022;
+            border-left: 1px solid #E67022;
+            border-right: 1px solid #C04F03;
+            border-bottom: 1px solid #C04F03;
+        }
+    .exercise.button:hover, #answer_area input.button:hover {
+        color: #000;
+    }
+    .exercise.button::-moz-focus-inner, #answer_area input.button::-moz-focus-inner {
+        border: 0;
+        padding: 0;
+    }
+    #answer_area .info-box .select-choice {
+        margin: 5px 0 10px;
+    }
+/* End of Individual Exercise Styles */

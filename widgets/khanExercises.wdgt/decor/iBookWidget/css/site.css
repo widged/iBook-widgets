@@ -1,0 +1,90 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+
+body {
+	padding-top: 60px;
+	padding-bottom: 40px;
+	padding-left: 12px;
+	padding-right: 12px;
+}
+
+#outer-wrapper {
+    background: url(images/light-page-bg.png) repeat-x;
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    margin: 0 0 -77px;
+}
+
+#page-container, #page-container-inner {
+    background: transparent url(images/content-border.1.png) no-repeat right 85px; /*! data-uri(/images/content-border.1.png) */
+}
+#page-container {
+    background-position: 0 85px;
+    min-width: 700px;
+    max-width: 1000px;
+    position: relative;
+    margin: 0 auto;
+}
+
+/*
+ * Hide links with href=# and other script-requiring elements from non-scripting users,
+ * since they will only be confusing.  They will be made visible by script.
+ */
+.requires_script {
+    visibility: hidden;
+}
+
+
+/* End of basic typography */
+
+/* Links in the header and footer don't change color when visited. */
+a:link, header a:visited, footer a:visited, .visited-no-recolor a:visited {
+    color: #005987;
+    text-decoration: none;
+}
+
+a:visited {
+    color: #678D00;
+}
+
+a:link:hover, a:link:focus, a:visited:hover, a:visited:focus {
+    color: #678D00;
+    text-decoration: underline;
+}
+
+/*
+ * Give script-using links a dotted underline when they are visible.
+ */
+
+a.uses_script:link,
+a.uses_script:visited {
+    text-decoration: none;
+    border-bottom: dotted 1px #0075b1;
+}
+
+a.uses_script:link:hover, a.uses_script:link:focus,
+a.uses_script:visited:hover, a.uses_script:visited:focus
+{
+    border-color: #DD6900;
+}
+

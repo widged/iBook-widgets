@@ -1,0 +1,130 @@
+/* A simple 3D button style */
+.simple-button {
+    color: #333 !important;
+    cursor: pointer !important;
+    border: 1px solid #ccc;
+    border-bottom: 1px solid #bbb;
+    line-height: 22px;
+    padding: 5px 10px;
+    position: relative;
+    margin: 0;
+    text-decoration: none !important;
+
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+
+    text-shadow: 0 1px 0 #fff;
+
+    -moz-box-shadow: inset 0 1px 0 rgba(255,255,255, .3);
+    -webkit-box-shadow: inset 0 1px 0 rgba(255,255,255, .3);
+    box-shadow: inset 0 1px 0 rgba(255,255,255, .3);;
+
+}
+.lte7 .simple-button {
+    position: static;
+}
+input.simple-button {
+    line-height: 15px;
+}
+
+.simple-button:hover {
+    border-color: #aaa;
+
+    -webkit-box-shadow: inset 0 1px 0 rgba(255,255,255, .4), inset 0 0 50px 5px rgba(255,255,255,.2);
+    -moz-box-shadow: inset 0 1px 0 rgba(255,255,255, .4), inset 0 0 50px 5px rgba(255,255,255,.2);
+    box-shadow: inset 0 1px 0 rgba(255,255,255, .4), inset 0 0 50px 5px rgba(255,255,255,.2);
+}
+
+.lte8 .simple-button:hover {
+    outline: 2px solid #333;
+}
+
+.simple-button:active {
+    top: 1px;
+}
+/* A blue color scheme for the simple button */
+.simple-button.blue {
+    color: #fff !important;
+    border-color: #2c3747 !important;
+    border-bottom-color: #13181f !important;
+    text-shadow:  0 -1px 0 #13181f;
+}
+/* A green color scheme for the simple button */
+.simple-button.green {
+    color: #fff !important;
+    border-color: #76a005 !important;
+    border-bottom-color: #557303 !important;
+    text-shadow:  0 -1px 0 #557303;
+}
+/* An orange color scheme for the simple button */
+.simple-button.orange {
+    color: #fff !important;
+    border-color: #bf4f04 !important;
+    border-bottom-color: #803503 !important;
+    text-shadow:  0 -1px 0 #a64403;
+}
+.simple-button.disabled {
+    color: #ddd !important;
+}
+.simple-button.seethrough {
+    color: #444 !important;
+    text-shadow: none;
+}
+.simple-button.with-icon {
+    padding-left: 30px;
+}
+.simple-button.with-icon img {
+    position: absolute;
+    left: 7px;
+    top: 3px;
+}
+.simple-button.social-button {
+    display: inline-block;
+    text-transform: uppercase;
+    margin-bottom: 9px;
+    font-size: 12px;
+    font-weight: bold;
+    max-width: 200px;
+    padding-top: 7px;
+}
+.simple-button.social-button img {
+    vertical-align: middle;
+    width: 24px;
+    height: 24px;
+}
+
+
+/* default silver button gradient */
+.action-gradient {
+    background: #eee;
+    background-image: -webkit-gradient(linear, left top, left bottom,  from(#f7f7f7), to(#ddd));
+    background-image: -moz-linear-gradient( top, #f7f7f7, #ddd );
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f7f7f7', endColorstr='#dddddd');
+}
+
+/* blue button gradient */
+.action-gradient.blue {
+    background: #3a4759;
+    background-image: -webkit-gradient(linear, left top, left bottom,  from(#3a4759), to(#222e3e));
+    background-image: -moz-linear-gradient( top, #3a4759, #222e3e );
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#3a4759', endColorstr='#222e3e');
+}
+/* green button gradient */
+.action-gradient.green {
+    background: #89b908;
+    background-image: -webkit-gradient(linear, left top, left bottom,  from(#8aba08), to(#6e9700));
+    background-image: -moz-linear-gradient( top, #8aba08, #6e9700 );
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#8aba08', endColorstr='#6e9700');
+}
+/* orange button gradient */
+.action-gradient.orange {
+    background: #e35d04;
+    background-image: -webkit-gradient(linear, left top, left bottom,  from(#e35d04), to(#bf4f04));
+    background-image: -moz-linear-gradient( top, #e35d04, #bf4f04 );
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#e35d04', endColorstr='#bf4f04');
+}
+.action-gradient.seethrough {
+    background-image: -webkit-gradient(linear, left top, left bottom,  from(rgba(255,255,255, .5)), to(rgba(255,255,255, .0)));
+    background-image: -moz-linear-gradient( top, rgba(255,255,255, .5), rgba(255,255,255, 0) );
+}

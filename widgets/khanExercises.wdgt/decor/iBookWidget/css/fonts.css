@@ -1,0 +1,167 @@
+/*These are for the arithmetic problems*/
+FONT.Sel0
+{
+  FONT-FAMILY: arial,helvetica,sans-serif;
+  FONT-SIZE: 3em;
+  COLOR: #666666;
+  FONT-WEIGHT: BOLD;
+}
+
+
+
+FONT.sel1 /*This says sel *one*..not two l's*/
+{
+  FONT-FAMILY: arial,helvetica,sans-serif;
+  FONT-SIZE: 3em;
+  COLOR: #D9A326;
+  FONT-WEIGHT: BOLD;
+}
+
+FONT.sel2
+{
+  FONT-FAMILY: arial,helvetica,sans-serif;
+  FONT-SIZE: 3em;
+  COLOR: #E8887D;
+  FONT-WEIGHT: BOLD;
+}
+
+FONT.sel3
+{
+  FONT-FAMILY: arial,helvetica,sans-serif;
+  FONT-SIZE: 3em;
+  COLOR: #9CC9B7;
+  FONT-WEIGHT: BOLD;
+}
+
+FONT.sel4
+{
+  FONT-FAMILY: arial,helvetica,sans-serif;
+  FONT-SIZE: 3em;
+  COLOR: #AE9CC9;
+  FONT-WEIGHT: BOLD;
+}
+
+FONT.sel5
+{
+  FONT-FAMILY: arial,helvetica,sans-serif;
+  FONT-SIZE: 3em;
+  COLOR: #CC6699;
+  FONT-WEIGHT: BOLD;
+}
+
+FONT.sel6
+{
+  FONT-FAMILY: arial,helvetica,sans-serif;
+  FONT-SIZE: 3em;
+  COLOR: #FF6347;
+  FONT-WEIGHT: BOLD;
+}
+
+FONT.noSel
+{
+  FONT-FAMILY: arial,helvetica,sans-serif;
+  FONT-SIZE: 3em;
+  COLOR: #666666;
+  FONT-WEIGHT: BOLD;
+}
+
+
+
+
+FONT.selLight
+{
+  FONT-FAMILY: arial,helvetica,sans-serif;
+  FONT-SIZE: 3em;
+  COLOR: #EEEEEE;
+  FONT-WEIGHT: BOLD;
+}
+
+FONT.doubleDigLight
+{
+  FONT-FAMILY: arial,helvetica,sans-serif;
+  FONT-SIZE: 1.3em;
+  COLOR: #EEEEEE;
+  FONT-WEIGHT: BOLD;
+}
+
+
+FONT.inv
+{
+  FONT-FAMILY: arial,helvetica,sans-serif;
+  FONT-SIZE: 3em;
+  COLOR: #FFFFFF;
+  FONT-WEIGHT: BOLD;
+}
+
+FONT.doubleDigInv
+{
+  FONT-FAMILY: arial,helvetica,sans-serif;
+  FONT-SIZE: 1.3em;
+  COLOR: #FFFFFF;
+  FONT-WEIGHT: BOLD;
+}
+
+
+
+FONT.doubleDig0
+{
+  FONT-FAMILY: arial,helvetica,sans-serif;
+  FONT-SIZE: 1.3em;
+  COLOR: #666666;
+  FONT-WEIGHT: BOLD;
+}
+
+FONT.doubleDig1
+{
+  FONT-FAMILY: arial,helvetica,sans-serif;
+  FONT-SIZE: 1.3em;
+  COLOR: #D9A326;
+  FONT-WEIGHT: BOLD;
+}
+
+FONT.doubleDig2
+{
+  FONT-FAMILY: arial,helvetica,sans-serif;
+  FONT-SIZE: 1.3em;
+  COLOR: #E8887D;
+  FONT-WEIGHT: BOLD;
+}
+
+FONT.doubleDig3
+{
+  FONT-FAMILY: arial,helvetica,sans-serif;
+  FONT-SIZE: 1.3em;
+  COLOR: #9CC9B7;
+  FONT-WEIGHT: BOLD;
+}
+
+FONT.doubleDig4
+{
+  FONT-FAMILY: arial,helvetica,sans-serif;
+  FONT-SIZE: 1.3em;
+  COLOR: #AE9CC9;
+  FONT-WEIGHT: BOLD;
+}
+
+FONT.doubleDig5
+{
+  FONT-FAMILY: arial,helvetica,sans-serif;
+  FONT-SIZE: 1.3em;
+  COLOR: #CC6699;
+  FONT-WEIGHT: BOLD;
+}
+
+FONT.doubleDig6
+{
+  FONT-FAMILY: arial,helvetica,sans-serif;
+  FONT-SIZE: 1.3em;
+  COLOR: #FF6347;
+  FONT-WEIGHT: BOLD;
+}
+
+FONT.explanation
+{
+  FONT-FAMILY: arial,helvetica,sans-serif;
+  FONT-SIZE: .9em;
+  COLOR: #333333;
+}
